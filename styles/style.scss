@@ -1,0 +1,434 @@
+
+
+// All styles. All screens
+@import './colors'; // importing the colors file.
+
+@font-face {
+    font-family: 'Inter';
+    src: url(fonts\Inter-VariableFont_slnt,wght.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    font-family: 'Inter';
+}
+.container-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1;
+}
+.container-grid .left-grid {
+    padding-left: 2rem;
+    height: 48.688rem;
+}
+.logo {
+    padding-top: 2rem;
+}
+.title {
+    margin-top: 8rem;
+}
+.title h1 {
+    font-family: 'Inter';
+    text-transform:capitalize;
+    width: 32rem;
+    font-size: 48px;
+    font-weight: 900;
+}
+.title h1 span {
+    color: $primary-color;
+}
+.repBtn {
+    margin-top: 1rem;
+}
+.repBtn a{
+    font-size: 18px;
+    display: inline-block;
+    text-decoration: none;
+    color: $secondary-color;
+    padding: 1.5rem 4rem;
+    border-radius: 5px;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+}
+.repBtn a:hover {
+    color: $primary-color;
+    background: linear-gradient(to right, $primary-color, white);
+}
+.container-grid .right-grid {
+    background-color: $primary-color;
+    position: relative;
+    height:max-content;
+    top: 0;
+    left:0;
+    height: 48.688rem;
+}
+.right-grid .right-header {
+    padding-top: 1.5rem;
+    display: flex;
+}
+.right-header a {
+    color: $secondary-color;
+    text-decoration: none;
+}
+.report {
+    margin: 0 5em;
+    padding: 0 2rem;
+}
+.right-header a {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; 
+}
+.right-header a:hover {
+    background-color: $secondary-color;
+    color: $primary-color;
+}
+.sign {
+    margin-left: 5rem;
+}
+.signlink  {
+    padding: 0 1rem;
+}
+.complaints img:hover {
+    cursor: pointer;
+    // -webkit-transform: rotateX(45deg);
+    transform: rotateY(180deg);
+    transition: 2s transform;
+}
+.complaint-img1 img {
+    top: 8rem;
+    left: -2rem;
+    position: absolute;
+    width:29.125;
+    height: 21.063;
+    object-fit: cover;
+}
+
+.complaint-img2 img {
+    width: 22.438rem;
+    height: 18.438rem;
+    object-fit: cover;
+    position: absolute;
+    top: 17rem;
+    left: 15rem;
+}
+
+// ABOUT CONTENT 
+.about {
+    margin-top: 10.5rem;
+}
+.aboutGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+.aboutVideo{
+    height: 38rem;
+    width: 32rem;
+    position: relative;
+}
+.aboutVideo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+img.play-img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    top: 18rem;
+    right: 14rem;
+}
+.aboutVideo::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 2rem;
+    left:2rem;
+    background-color: $primary-color;
+    z-index: -1;
+}
+.aboutText {
+    margin-top: 4rem;
+}
+.aboutText h2 {
+    text-align: left;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58px;
+}
+.aboutText p {
+    font-size: 18px;
+    font-weight: 400;
+    width: 35rem;
+    margin-top :3rem;
+    text-align: left;
+    font-family: 'Inter';
+}
+.aboutText .repBtn {
+    margin-top: 3rem;
+}
+
+// Recent Reports
+.recentReports {
+    background-color: $primary-color;
+    height: max-content;
+    padding: 2rem 3rem;
+    margin-top: 7rem;
+}
+.recentReports h2 {
+    font-size: 48px;
+    color: $secondary-color;
+    font-weight: 700;
+}
+.recentReports hr {
+    width: 110px;
+    height: 11px;
+    background-color: $secondary-color;
+    border: none;
+}
+.reports {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+    // display: grid;
+    // grid-template-columns: auto auto auto auto;
+    // grid-template-rows: 1;
+}
+.rep {
+    display:grid;
+    place-items: center;
+    background-color: $secondary-color;
+    width: 18.75rem;
+    height: 26.5rem;
+    border-radius: 8px;
+}
+.rep img {
+    width: 17.25rem;
+    height: 12.94rem;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.name-date {
+    display: flex;
+}
+.name-date p{
+    color: #5E5E5E;
+}
+.rep p {
+    font-size: 15px;
+    padding: 0 1rem;
+}
+#lga {
+    color: $primary-color;
+    text-align: left;
+    font-weight: 900;
+}
+.seemore {
+    margin-top: 1rem;
+
+     a {
+        padding: 1rem 3.5rem;
+        
+        border-radius: 5px;
+        background-color: $secondary-color;
+        color: #000000;
+        text-decoration: none;
+        font-size: 18px;  
+    }
+}
+
+.seemore:hover {
+    cursor: pointer;
+    a {
+        color: $primary-color;
+    }
+}
+//Niger Delta Images 
+.peek {
+    margin-top: 3rem;
+    margin-bottom: 9rem;
+}
+.peek h2 {
+    padding-left: 2rem;
+    width: 44rem;
+    font-size: 48px;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+.imagesDelta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.imagesDelta img {
+    width: 19.8rem;
+    height: 16rem;
+}
+// footer
+footer {
+    width: 100%;
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    font-size: 16px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: $secondary-color;
+}
+footer h4 span {
+    font-family: 'Inter';
+    font-weight: 900;
+}
+
+//  Login 
+#closebtn {
+    position: relative;
+    top: -7rem;
+    left: 100%;
+    cursor: pointer;
+}
+#closebtn:hover {
+    box-shadow: 10px 5px 3px $primary-color;
+    border-radius: 50%;
+}
+.login{
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    padding: 10rem;
+    top: 5%;
+    left: 25%;
+}
+.logText {
+    margin-bottom: 2rem;
+}
+.details * {
+    margin-top: 1rem;
+}
+.inputsA input {
+    padding: 0rem 1rem;
+    width: 25rem;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+input[type='checkbox']{
+    margin-right: 8px;
+}
+.remember a {
+    margin-left: 9rem;
+    text-decoration: none;
+    color:#000000;
+}
+.remember a:hover {
+    color: rgb(2, 2, 81);
+}
+button[type="submit"] {
+    background-color: #000000;
+    color: white;
+    width: 25rem;
+    height: 50px;
+    text-align: center;
+}
+
+// .container::after {
+//     // display: none;
+//     content: '';
+//     position: absolute;
+//     top: 0;left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(11, 11, 11,0.9);
+// }
+.overlay {
+    // background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    background-color: rgb(11, 11, 11);
+    width: 100%;
+    z-index: 3;
+}
+form p {
+    text-align: center;
+}
+.signOptions {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.signOptions a {
+    background-color: #000000;
+    padding: 0.5rem 1rem;
+    border-radius: 20%;
+    border: 1px solid black;
+}
+.signOptions a:hover {
+    background-color: transparent;
+    border: none;
+    border-top: 1px solid black;
+}
+.signOptions img {
+    width: 20px;
+    position: relative;
+    bottom: 5px;
+    height: 20px;
+    object-fit: cover;
+}
+p#signUp {
+    color:rgb(48, 121, 217);
+}
+#signUp a{
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+}
+
+// Cases Page 
+header {
+    padding-left: 3.5rem;
+    display: flex;   
+}
+.reportLink a {
+    font-weight: 900;
+}
+.headLinks {
+    padding-top: 2rem;
+    display: flex;
+    margin-left: 45%;
+}
+.headLinks a {
+    text-decoration: none;
+    color: $primary-color;
+}
+.signIn {
+    margin-left: 10rem;
+}
+.signIn a {
+    margin-left: 2rem;
+}
+.content h1 {
+    padding-left: 3.5rem;
+    color: $primary-color;
+    width: 60rem;
+    margin: 2rem 0;
+}
+.videoRep {
+    width: 68rem;
+    margin: auto;
+}
+img.newPlay {
+    top: 27rem;
+    right: 39rem;
+}
+.newBtn {
+    display: flex;
+    justify-content: center;
+}
+.repNew {
+    border: 3px solid #F4F4F4;
+}
